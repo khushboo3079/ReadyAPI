@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" name="Objects" path="/objects" id="c0ed6396-43c1-4366-8c80-d5be4cfad680">
+  <con:settings>
+    <con:setting id="c0ed6396-43c1-4366-8c80-d5be4cfad680fileName">Objects</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>ID</con:name>
+      <con:style>QUERY</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="POST" id="133170c7-5161-4f83-96cf-936ac27060dc" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400 405</con:status>
+      <con:params/>
+      <con:element xmlns:obj="https://api.restful-api.dev/objects">obj:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="a9147871-75e3-40c0-95f3-c545698bb7ac" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.restful-api.dev</con:endpoint>
+      <con:request>{
+        "name": "ipad",
+        "data": {
+            "generation": "4th",
+            "price": 520,
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "Year":2024
+        }
+}</con:request>
+      <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>ID</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="GET" id="41863ff6-25e5-469e-ab61-ddb14866176f" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="661cf3ec-b7fe-4805-8d75-e88401106891" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.restful-api.dev</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="PUT" id="f4ebaccf-ecaf-4349-b9ce-51ea423134c1" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="14a65960-2db7-4038-992c-0b64a509837c" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.restful-api.dev</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="DELETE" id="b6e9e9d4-0691-40dd-a94a-9709d27d7d38" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="72a61e76-20a9-40ad-9548-9451c1448844" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.restful-api.dev</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

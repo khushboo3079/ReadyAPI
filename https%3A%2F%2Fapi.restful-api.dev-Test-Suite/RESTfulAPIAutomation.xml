@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="d0def475-4f4f-44cb-94c4-3d4900fd9633" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="RESTfulAPIAutomation" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="d0def475-4f4f-44cb-94c4-3d4900fd9633fileName">RESTfulAPIAutomation</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="d35c6216-ba6c-416f-a2cb-131a8bf4ccdc">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>D:/API/RESTful API Automation/test-data/Post_TestCase1_Data.xlsx</file>
+          <worksheet>Add_data</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>name</con:property>
+      <con:property>generation</con:property>
+      <con:property>price</con:property>
+      <con:property>year</con:property>
+      <con:property>capacity</con:property>
+      <con:property>cPUModel</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TestCase1_POST" id="05d24ca8-2d27-483e-8377-a792933c997a">
+    <con:settings/>
+    <con:config service="https://api.restful-api.dev" methodName="POST" resourcePath="/objects" xsi:type="con:RestRequestStep">
+      <con:restRequest name="TestCase1_POST" id="1066a8a7-864c-4568-8e32-43bbc29bb203" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.restful-api.dev</con:endpoint>
+        <con:request>{
+        "name": "ipad",
+        "data": {
+            "generation": "4th",
+            "price": 520,
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "Year":2024
+        }
+}</con:request>
+        <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>ID</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="e8d89f8a-8cc2-4bdb-9632-d4d273193b7e">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>REST Request</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TestCase2_GET" id="c1ad4ee0-f317-45d7-b47a-72026b492fa1">
+    <con:settings/>
+    <con:config service="https://api.restful-api.dev" resourcePath="/objects" methodName="GET" xsi:type="con:RestRequestStep">
+      <con:restRequest name="TestCase2_GET" id="661cf3ec-b7fe-4805-8d75-e88401106891" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.restful-api.dev</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.restful-api.dev/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ccda9742-dfc2-420c-8131-62d597896ffc" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="dcc7792d-a5a3-4fd1-b3e1-d3c018225ae5" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TestCase3_PUT" id="b8328f8a-3984-4ee6-86ed-505cf2814364">
+    <con:settings/>
+    <con:config service="https://api.restful-api.dev" methodName="PUT" resourcePath="/objects" xsi:type="con:RestRequestStep">
+      <con:restRequest name="TestCase3_PUT" id="ec72be71-26bb-4c28-8531-6940f1662305" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.restful-api.dev</con:endpoint>
+        <con:request>{
+    "data": {
+        "generation": "5th",
+        "price": 567
+    }
+}</con:request>
+        <con:originalUri>https://api.restful-api.dev/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4a8c72f7-9872-4bcb-bdd1-6ddb24cd768c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="78f8d15c-5540-4a9b-84df-3b05e3a5f561" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TestCase4_GET" id="ac4ce396-4bda-4bad-982d-f7a97f5f11b8">
+    <con:settings/>
+    <con:config service="https://api.restful-api.dev" methodName="GET" resourcePath="/objects" xsi:type="con:RestRequestStep">
+      <con:restRequest name="TestCase4_GET" id="a672902c-76ca-4ced-a0af-a5e50ce9fdb8" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.restful-api.dev</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.restful-api.dev/</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="TestCase5_DELETE" id="a97e4d40-d5f9-4863-88e2-1b5e1eb4bf66">
+    <con:settings/>
+    <con:config service="https://api.restful-api.dev" methodName="DELETE" resourcePath="/objects" xsi:type="con:RestRequestStep">
+      <con:restRequest name="TestCase5_DELETE" id="c44d820b-1935-4133-ad74-a0af63bc5022" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.restful-api.dev</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.restful-api.dev/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="29637079-c74a-4580-8789-9b91074bf0df" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="9ef3a1d8-e485-480e-92aa-27826c6e857a" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
