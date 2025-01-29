@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="6839b363-08df-4b17-a0b4-27a7366adef3" name="APITesting">
+  <con:settings id="9ff02473-41d0-48de-bd60-e32779069056">
+    <con:setting id="6839b363-08df-4b17-a0b4-27a7366adef3fileName">APITesting</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

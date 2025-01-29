@@ -29,7 +29,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="TestCase1_POST" id="05d24ca8-2d27-483e-8377-a792933c997a">
     <con:settings/>
-    <con:config service="https://api.restful-api.dev" methodName="POST" resourcePath="/objects" xsi:type="con:RestRequestStep">
+    <con:config service="AddProduct" methodName="POST" resourcePath="/objects" xsi:type="con:RestRequestStep">
       <con:restRequest name="TestCase1_POST" id="1066a8a7-864c-4568-8e32-43bbc29bb203" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -69,7 +69,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="TestCase2_GET" id="c1ad4ee0-f317-45d7-b47a-72026b492fa1">
     <con:settings/>
-    <con:config service="https://api.restful-api.dev" resourcePath="/objects" methodName="GET" xsi:type="con:RestRequestStep">
+    <con:config service="AddProduct" resourcePath="/objects" methodName="GET" xsi:type="con:RestRequestStep">
       <con:restRequest name="TestCase2_GET" id="661cf3ec-b7fe-4805-8d75-e88401106891" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -99,7 +99,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="TestCase3_PUT" id="b8328f8a-3984-4ee6-86ed-505cf2814364">
     <con:settings/>
-    <con:config service="https://api.restful-api.dev" methodName="PUT" resourcePath="/objects" xsi:type="con:RestRequestStep">
+    <con:config service="AddProduct" methodName="PUT" resourcePath="/objects" xsi:type="con:RestRequestStep">
       <con:restRequest name="TestCase3_PUT" id="ec72be71-26bb-4c28-8531-6940f1662305" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -135,7 +135,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="TestCase4_GET" id="ac4ce396-4bda-4bad-982d-f7a97f5f11b8">
     <con:settings/>
-    <con:config service="https://api.restful-api.dev" methodName="GET" resourcePath="/objects" xsi:type="con:RestRequestStep">
+    <con:config service="AddProduct" methodName="GET" resourcePath="/objects" xsi:type="con:RestRequestStep">
       <con:restRequest name="TestCase4_GET" id="a672902c-76ca-4ced-a0af-a5e50ce9fdb8" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -155,7 +155,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="TestCase5_DELETE" id="a97e4d40-d5f9-4863-88e2-1b5e1eb4bf66">
     <con:settings/>
-    <con:config service="https://api.restful-api.dev" methodName="DELETE" resourcePath="/objects" xsi:type="con:RestRequestStep">
+    <con:config service="AddProduct" methodName="DELETE" resourcePath="/objects" xsi:type="con:RestRequestStep">
       <con:restRequest name="TestCase5_DELETE" id="c44d820b-1935-4133-ad74-a0af63bc5022" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
